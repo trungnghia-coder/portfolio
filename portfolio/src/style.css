@@ -1,0 +1,99 @@
+body { 
+    background-color: #1a1a1a !important; 
+    color: white !important; 
+    padding-bottom: 100px;
+}
+.navbar { 
+    background-color: #252525 !important;
+    transition: all 0.3s ease;
+}
+.navbar.hidden { 
+    transform: translateY(-100%); 
+    opacity: 0; 
+}
+.bottom-nav {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(150%);
+    background-color: rgba(37, 37, 37, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    padding: 8px 20px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1030;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    width: auto;
+    max-width: 400px;
+}
+.bottom-nav.visible { 
+    transform: translateX(-50%) translateY(0); 
+    opacity: 1; 
+}
+.nav-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    background-color: transparent;
+}
+.nav-icon:hover {
+    background-color: rgba(243, 214, 145, 0.2);
+    transform: translateY(-3px);
+}
+.nav-icon i {
+    transition: all 0.3s ease;
+}
+.nav-icon:hover i {
+    color: #f3d691 !important;
+}
+.avatar-bg { 
+    background-color: #f3d691; 
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    overflow: hidden;
+    animation: morph 8s ease-in-out infinite;
+}
+@keyframes morph {
+    0% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+    25% {
+        border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+    }
+    50% {
+        border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+    }
+    75% {
+        border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+    }
+    100% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+}
+.card {
+    background-color: #2a2a2a !important;
+    border-color: #333 !important;
+}
+.connect-text {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+.connect-text:hover {
+    transform: scale(1.05);
+    color: #f3d691 !important;
+}
+.connect-text:active {
+    transform: scale(0.95);
+}
+.social-icon {
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+.social-icon:hover {
+    transform: translateY(-3px) scale(1.1);
+}
