@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import About from "../views/AboutView.vue";
 import Project from "../views/ProjectView.vue";
+import Certificate from "../views/CertificateView.vue";
 
 const routes = [
     {
@@ -12,6 +13,11 @@ const routes = [
         path: '/projects',
         name: 'project',
         component: Project
+    },
+    {
+        path: '/certificates',
+        name: 'certificate',
+        component: Certificate
     }
 ];
 

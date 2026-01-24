@@ -24,16 +24,11 @@
                         </router-link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-bold text-secondary" href="#certificate">
+                        <router-link to="/certificates" class="nav-link fw-bold text-secondary" active-class="text-warning">
                             <i class="fa-solid fa-certificate me-2 d-lg-none"></i>CERTIFICATE
-                        </a>
+                        </router-link>
                     </li>
                 </ul>
-            </div>
-            
-            <!-- Theme toggle (hidden on mobile in navbar, available in bottom nav) -->
-            <div class="d-none d-lg-block ms-auto">
-                <i class="fa-regular fa-moon fs-5 text-light" style="cursor: pointer;"></i>
             </div>
         </div>
     </nav>
@@ -47,9 +42,9 @@
             <router-link to="/projects" class="nav-icon text-decoration-none">
                 <i class="fa-solid fa-folder text-secondary fs-5"></i>
             </router-link>
-            <a href="#certificate" class="nav-icon text-decoration-none">
+            <router-link to="/certificates" class="nav-icon text-decoration-none">
                 <i class="fa-solid fa-certificate text-secondary fs-5"></i>
-            </a>
+            </router-link>
             <a href="#" class="nav-icon text-decoration-none" @click.prevent="scrollToTop">
                 <i class="fa-solid fa-arrow-up text-secondary fs-5"></i>
             </a>
