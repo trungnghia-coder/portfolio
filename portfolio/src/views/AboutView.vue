@@ -188,27 +188,30 @@
     </div>
 </template>
 
- <script setup>
+<script setup>
+import { onMounted } from 'vue'
+
+onMounted(() => {
     // Scroll Detection for Navigation
     let lastScrollTop = 0;
     const mainNav = document.getElementById('mainNav');
     const bottomNav = document.getElementById('bottomNav');
 
-    window.addEventListener('scroll', function() {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-        if (scrollTop > 200) {
-            // Scrolled down more than 200px
-            mainNav.classList.add('hidden');
-            bottomNav.classList.add('visible');
-        } else {
-            // Near top
-            mainNav.classList.remove('hidden');
-            bottomNav.classList.remove('visible');
-        }
-        
-        lastScrollTop = scrollTop;
-    });
+    if (mainNav && bottomNav) {
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > 200) {
+                mainNav.classList.add('hidden');
+                bottomNav.classList.add('visible');
+            } else {
+                mainNav.classList.remove('hidden');
+                bottomNav.classList.remove('visible');
+            }
+            
+            lastScrollTop = scrollTop;
+        });
+    }
 
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -220,10 +223,12 @@
             }
         });
     });
+})
 
-    // Toggle social icons
-    function toggleSocial() {
-        const socialIcons = document.getElementById('socialIcons');
+// Toggle social icons
+function toggleSocial() {
+    const socialIcons = document.getElementById('socialIcons');
+    if (socialIcons) {
         socialIcons.style.transition = 'all 0.3s ease';
         if (socialIcons.style.opacity === '0' || !socialIcons.style.opacity) {
             socialIcons.style.opacity = '1';
@@ -233,4 +238,17 @@
             socialIcons.style.transform = 'scale(0.8)';
         }
     }
+}
 </script>
+
+<style scoped>
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--bs-warning) !important;
+    box-shadow: 0 10px 30px rgba(243, 214, 145, 0.2) !important;
+}
+</style>
