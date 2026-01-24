@@ -28,7 +28,7 @@
                                 
                                 <!-- Project Image -->
                                 <div class="project-img-wrapper flex-shrink-0 rounded-2 overflow-hidden border border-secondary" 
-                                     style="width: 80px; height: 80px;">
+                                     style="width: 120px; height: 80px;">
                                     <img :src="project.image" 
                                          :alt="project.title"
                                          class="project-img w-100 h-100 rounded"
@@ -132,6 +132,18 @@ const getTechIcon = (tech) => {
         'Node.js': 'devicon-nodejs-plain colored',
         'MongoDB': 'devicon-mongodb-plain colored',
         'Firebase': 'devicon-firebase-plain colored',
+        'JSP': 'fa-solid fa-file-code text-success',
+        'HTML': 'devicon-html5-plain colored',
+        'CSS': 'devicon-css3-plain colored',
+        'YouTube API': 'fa-brands fa-youtube text-danger',
+        'REST API': 'fa-solid fa-server text-info',
+        'Spring Security': 'fa-solid fa-shield-alt text-success',
+        'Spring Data JPA': 'fa-solid fa-database text-primary',
+        'VueJS': 'devicon-vuejs-plain colored',
+        'REST API': 'fa-solid fa-server text-info',
+        'Axios': 'fa-solid fa-network-wired text-primary',
+        'Pinia': 'fa-solid fa-cubes text-purple',
+        'JWT Authentication': 'fa-solid fa-user-shield text-warning'
     }
     
     return iconMap[tech] || 'fa-solid fa-code text-warning'

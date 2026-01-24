@@ -16,10 +16,8 @@ const certificatesList = [
       }
     ]
   }
-  // Thêm platform khác ở đây
 ]
 
-// Tự động generate ID
 export const certificates = certificatesList.map((platform, index) => ({
   ...platform,
   id: index + 1,
